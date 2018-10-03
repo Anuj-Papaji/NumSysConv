@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
                 default:
                     queryType = 5;
                     Toast.makeText(this,
-                            "Invalid term. Please enter a valid term.",
+                            "Invalid term. Please enter a valid term. This term is not ready yet.",
                             Toast.LENGTH_SHORT).show();
                     return;
             }
