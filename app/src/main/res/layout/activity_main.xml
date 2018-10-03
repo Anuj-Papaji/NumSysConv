@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E3F2FD"
+            tools:context="com.test.qgitc.qgit.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/headMain"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/LLay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/takeQ"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/background_light"
+                android:hint="@string/conv_query_hint"
+                android:onClick="detectNS"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvDetect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#8E24AA"
+                android:textStyle="italic"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlq1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LLay1">
+
+
+            <LinearLayout
+                android:id="@+id/LLayq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvConvQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/convQ"
+                    android:textAllCaps="true"
+                    android:textColor="#8E24AA"
+                    android:textSize="16sp"
+                    android:textStyle="italic"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp">
+
+                    <Button
+                        android:id="@+id/bHex1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="#B2DFDB"
+                        android:onClick="setQTH"
+                        android:text="@string/hex"/>
+
+                    <Button
+                        android:id="@+id/bBin1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="#B2DFDB"
+                        android:onClick="setQTB"
+                        android:text="@string/bin"/>
+
+                    <Button
+                        android:id="@+id/bDec1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="#B2DFDB"
+                        android:onClick="setQTD"
+                        android:text="@string/dec"/>
+
+
+                    <Button
+                        android:id="@+id/bOct1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="#B2DFDB"
+                        android:onClick="setQTO"
+                        android:text="@string/oct"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlq1"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/LLay2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/res"
+                    android:textAllCaps="true"
+                    android:textColor="#8E24AA"
+                    android:textSize="20sp"
+                    android:textStyle="italic"/>
+
+                <TextView
+                    android:id="@+id/tvDef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/res"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LLay2"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/LLay3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl1"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvConv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/conv"
+                android:textAllCaps="true"
+                android:textColor="#8E24AA"
+                android:textSize="20sp"
+                android:textStyle="italic"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="20dp">
+
+                <Button
+                    android:id="@+id/bHex"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#B2DFDB"
+                    android:onClick="conv2hex"
+                    android:text="@string/hex"/>
+
+                <Button
+                    android:id="@+id/bBin"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#B2DFDB"
+                    android:onClick="conv2bin"
+                    android:text="@string/bin"/>
+
+                <Button
+                    android:id="@+id/bDec"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#B2DFDB"
+                    android:onClick="conv2dec"
+                    android:text="@string/dec"/>
+
+
+                <Button
+                    android:id="@+id/bOct"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#B2DFDB"
+                    android:onClick="conv2oct"
+                    android:text="@string/oct"/>
+
+            </LinearLayout>
+
+            <!--<TextView-->
+            <!--android:id="@+id/tvAddAct"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:text="@string/addact"-->
+            <!--android:textAllCaps="true"-->
+            <!--android:textColor="#8E24AA"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textStyle="italic" />-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingTop="20dp"-->
+            <!--style="?@android:attr/buttonBarButtonStyle">-->
+
+            <!--<Button-->
+            <!--android:id="@+id/bRS"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#B2DFDB"-->
+            <!--android:onClick=""-->
+            <!--android:text="@string/rs" />-->
+
+            <!--<Button-->
+            <!--android:id="@+id/bLS"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_toLeftOf="@id/bRS"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#B2DFDB"-->
+            <!--android:onClick=""-->
+            <!--android:text="@string/ls" />-->
+
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/LLay3"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/LLay3"
+                android:paddingRight="16dp"
+                android:text="@string/create_tag"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/createdBy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/LLay3"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp"
+                    android:text="@string/created_byA1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="16dp"
+                    android:text="@string/created_byKS"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="16dp"
+                    android:text="@string/created_byNKY"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="16dp"
+                    android:text="@string/created_bySP"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,18 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="NeatTricks" parent="AppTheme">
+        <item name="android:colorBackground">@color/neatTricks_background_material_light</item>
+        <item name="android:textColorPrimary">@color/neatTricks_primary_text</item>
+        <item name="colorPrimary">@color/neatTricks_colorPrimary</item>
+        <item name="android:textColorSecondary">@color/neatTricks_secondary_text</item>
+        <item name="colorAccent">@color/neatTricks_colorAccent</item>
+        <item name="colorPrimaryDark">@color/neatTricks_colorPrimaryDark</item>
+    </style>
+</resources>

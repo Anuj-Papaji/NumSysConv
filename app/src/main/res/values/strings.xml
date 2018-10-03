@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Qgit</string>
+    <string name="qns">TOUCH TO CHOOSE NUMBER SYSTEM</string>
+    <string name="res">RESULT : </string>
+    <string name="conv">CONVERT TO : </string>
+    <string name="convQ">Choose the system to convert from :</string>
+    <string name="addact">ADDITIONAL ACTIONS : </string>
+    <string name="oct">OCT</string>
+    <string name="dec">DEC</string>
+    <string name="bin">BIN</string>
+    <string name="hex">HEX</string>
+    <string name="ls">LEFT SHIFT</string>
+    <string name="rs">RIGHT SHIFT</string>
+    <string name="lo">SWITCH TO LOGIC OPERATIONS</string>
+    <string name="headMain">CONVERSION</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="headlop">LOGICAL OPERATIONS</string>
+    <string name="q1">enter 1st number</string>
+    <string name="q2">enter 2nd number</string>
+    <string name="lor">OR</string>
+    <string name="land">AND</string>
+    <string name="lnot">NOT</string>
+    <string name="lxor">XOR</string>
+    <string name="lxnor">XNOR</string>
+    <string name="lopo">OPERATIONS : </string>
+    <string name="about">About</string>
+    <string name="conv_query_hint">Enter number here </string>
+    <string name="create_tag">Created By : </string>
+    <string name="created_byA1">Sumit Kumar Burnwal </string>
+    <string name="sign">SK!3</string>
+    <string name="created_byKS">Kumar Sanu</string>
+    <string name="created_byNKY">Nitesh Kumar Yadav</string>
+    <string name="created_bySP">Subham Prasad</string>
+</resources>
